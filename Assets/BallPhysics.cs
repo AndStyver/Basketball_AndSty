@@ -9,6 +9,9 @@ public class BallPhysics : MonoBehaviour
         if (collision.CompareTag("Hoop"))
         {
             transform.position = new(0, 0);
+            HoopScript hoop = collision.GetComponent<HoopScript>();
+            hoop.score++;
+            hoop.UpdateScoreText();
         }
     }
 }
