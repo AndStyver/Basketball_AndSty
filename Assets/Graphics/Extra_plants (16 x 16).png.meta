@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 659167d8f693b484baad6ad5d356ed5d
+guid: 780230154c76fe6408ab48faf70cfb57
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3 - Cloud_cover_1_0
+      name: Extra_plants (16 x 16)_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 148
-        width: 45
-        height: 24
+        x: 17
+        y: 16
+        width: 46
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c92da1a92654dd94a89f56bb656c7de1
-      internalID: 1389364442
+      spriteID: 5f499ca2a0953384e9bc284f8b41d333
+      internalID: -662518507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3 - Cloud_cover_1_1
+      name: Extra_plants (16 x 16)_1
       rect:
         serializedVersion: 2
-        x: 117
-        y: 171
-        width: 23
-        height: 11
+        x: 87
+        y: 16
+        width: 50
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,92 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac1451620b31b0344ba6aea3b2ad9ee2
-      internalID: 2032425421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3 - Cloud_cover_1_2
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 123
-        width: 23
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d40ce6126a6a50488534afe72a1214f
-      internalID: 807405464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3 - Cloud_cover_1_3
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 116
-        width: 45
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56c5711f241d23c44868e908b48fedb9
-      internalID: -1887311252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3 - Cloud_cover_1_4
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 132
-        width: 45
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df5f235d1f44ba843873df56c23cc33c
-      internalID: 1619619875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 3 - Cloud_cover_1_5
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 107
-        width: 23
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66b5b5ab8f42912478f2feb8d6227976
-      internalID: -196108440
+      spriteID: 7be36dc2b5428144e801a4afe57deca0
+      internalID: 230981400
       vertices: []
       indices: 
       edges: []
@@ -252,12 +168,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      3 - Cloud_cover_1_0: 1389364442
-      3 - Cloud_cover_1_1: 2032425421
-      3 - Cloud_cover_1_3: -1887311252
-      3 - Cloud_cover_1_5: -196108440
-      3 - Cloud_cover_1_4: 1619619875
-      3 - Cloud_cover_1_2: 807405464
+      Extra_plants (16 x 16)_1: 230981400
+      Extra_plants (16 x 16)_0: -662518507
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
