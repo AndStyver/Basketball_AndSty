@@ -14,16 +14,18 @@ public class Player : MonoBehaviour
 
     public bool isGrounded;
 
-    [SerializeField] Animator animator;
+    public Animator animator;
 
-    [SerializeField] GameObject[] playerSprites;
+    public SpriteRenderer[] playerSprites;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
-        animator = GetComponentInChildren<Animator>(false); //(false) means it wont search in inactive children
-        if (animator == null) { Debug.LogError("Can't find Animator, are all PlayerSprites inactive?"); }
+        //animator = GetComponentInChildren<Animator>(false); //(false) means it wont search in inactive children
+        //if (animator == null) { Debug.LogError("Can't find Animator, are all PlayerSprites inactive?"); }
+
+        playerSprites = GetComponentsInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
