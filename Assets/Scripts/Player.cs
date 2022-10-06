@@ -24,8 +24,6 @@ public class Player : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         //animator = GetComponentInChildren<Animator>(false); //(false) means it wont search in inactive children
         //if (animator == null) { Debug.LogError("Can't find Animator, are all PlayerSprites inactive?"); }
-
-        playerSprites = GetComponentsInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
