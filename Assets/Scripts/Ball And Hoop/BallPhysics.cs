@@ -9,7 +9,7 @@ public class BallPhysics : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Hoop"))
+        if (collision.CompareTag("Hoop") && rbody.velocity.y < 0)
         {
             transform.position = new(0, 0);
             rbody.velocity = new(0, rbody.velocity.y);

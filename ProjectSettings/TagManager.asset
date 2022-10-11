@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Hoop
+  - Ball
+  - BallStop
   layers:
   - Default
   - TransparentFX
