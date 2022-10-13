@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public SpriteRenderer[] playerSprites;
     GroundCheck gCheck;
     Rigidbody2D rbody;
+    AudioSource audSource;
 
     [Header("Kick")]
     [SerializeField] GameObject kick;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         gCheck = GetComponentInChildren<GroundCheck>();
+        audSource = GetComponent<AudioSource>();
         //animator is not assigned here! it is assigned in SetupScene
     }
 
@@ -61,10 +63,12 @@ public class Player : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
+
         if (isGrounded) //if on ground, do a regular jump
         {
             rbody.velocity = new Vector2(rbody.velocity.x, 0); //Reset our y speed before the jump
             rbody.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+            audSource.Play();
         }
         if (isOnBall) //if were standing on the ball, apply a force to it backwards
         {
