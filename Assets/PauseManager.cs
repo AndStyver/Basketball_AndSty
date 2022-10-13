@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PauseManager : MonoBehaviour
     {
         if (!isPaused)
         {
+            DisablePlayerScript();
             Time.timeScale = 0;
             pausePanel.SetActive(true);
             returnButton.Select();
@@ -35,6 +37,7 @@ public class PauseManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        EnablePlayerScripts();
         pausePanel.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
@@ -43,6 +46,8 @@ public class PauseManager : MonoBehaviour
 
     public void ResetGame()
     {
+        EnablePlayerScripts();
+
         for (int i = 0; i < hoops.Length; i++) { hoops[i].score = 0; }
 
         ball.transform.position = Vector3.zero;
@@ -54,5 +59,28 @@ public class PauseManager : MonoBehaviour
         pausePanel.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
+    }
+
+    public void ExitToMenu()
+    {
+        Time.timeScale = 1;
+
+        SceneManager.LoadScene(0);
+    }
+
+    void EnablePlayerScripts()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].gameObject.GetComponent<PlayerInput>().enabled = true;
+        }
+    }
+
+    void DisablePlayerScript()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].gameObject.GetComponent<PlayerInput>().enabled = false;
+        }
     }
 }
