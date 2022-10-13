@@ -90,11 +90,14 @@ public class Player : MonoBehaviour
 
     public void Kick(InputAction.CallbackContext context)
     {
-        if (isGrounded)
+        if (context.started)
         {
-            kick.SetActive(true);
-            kickTimer = kickDuration;
-            animator.SetTrigger("kick");
+            if (isGrounded)
+            {
+                kick.SetActive(true);
+                kickTimer = kickDuration;
+                animator.SetTrigger("kick");
+            }
         }
     }
 }
