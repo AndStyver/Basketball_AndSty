@@ -13,6 +13,8 @@ public class SetupScene : MonoBehaviour
     int p1SpriteToLoad;
     int p2SpriteToLoad;
 
+    [SerializeField] GameObject hat;
+
     private void Start()
     {
         //in case any sprite are active, deactivate them all so that only one is active later
@@ -37,6 +39,8 @@ public class SetupScene : MonoBehaviour
             player2.animator = player2.playerSprites[1].GetComponent<Animator>();
         }
 
+        if (p1SpriteToLoad == p2SpriteToLoad) { hat.SetActive(true); }
+        else { hat.SetActive(false); }
     }
 
     void GetDinoIndex()

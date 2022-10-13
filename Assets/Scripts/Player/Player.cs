@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [Header("Components")]
     public Animator animator;
     public SpriteRenderer[] playerSprites;
+    [SerializeField] GameObject pText;
     GroundCheck gCheck;
     Rigidbody2D rbody;
     AudioSource audSource;
@@ -42,10 +43,18 @@ public class Player : MonoBehaviour
         animator.SetFloat("velocityX", Mathf.Abs(inputX)); //talks to the animator
 
         //flips the sprite depending on which way it is faced
-        if (inputX > 0) { transform.localScale = Vector3.one; }
-        else if (inputX < 0) { transform.localScale = new(-1, 1, 1); }
+        if (inputX > 0)
+        {
+            transform.localScale = Vector3.one;
+            pText.transform.localScale = new(0.5f, 0.5f);
+        }
+        else if (inputX < 0)
+        {
+            transform.localScale = new(-1, 1, 1);
+            pText.transform.localScale = new(-0.5f, 0.5f);
+        }
 
-        //sets the airborne bool in animator, note it should be opposite of grounded
+        //sets the airborne bool in animator, note it should be opposite of isGrounded
         if (isGrounded) { animator.SetBool("isAirborne", false); }
         else { animator.SetBool("isAirborne", true); }
 
