@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rbody.velocity = new(inputX * speed, rbody.velocity.y); //sets velocity
         animator.SetFloat("velocityX", Mathf.Abs(inputX)); //talks to the animator
 
         //flips the sprite depending on which way it is faced
@@ -48,15 +47,11 @@ public class Player : MonoBehaviour
         if (isGrounded) { animator.SetBool("isAirborne", false); }
         else { animator.SetBool("isAirborne", true); }
 
-        if (kickTimer > 0)
-        {
-            kickTimer -= Time.deltaTime;
-        }
-        if (kickTimer <= 0)
-        {
-            kick.SetActive(false);
-        }
+        if (kickTimer > 0) { kickTimer -= Time.deltaTime; }
+        if (kickTimer <= 0) { kick.SetActive(false); }
     }
+
+    private void FixedUpdate() { rbody.velocity = new(inputX * speed, rbody.velocity.y); } //sets velocity
 
     //unitys new input system
     public void Move(InputAction.CallbackContext context)

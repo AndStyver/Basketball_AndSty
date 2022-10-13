@@ -5,7 +5,13 @@ using UnityEngine;
 public class BallPhysics : MonoBehaviour
 {
     Rigidbody2D rbody;
-    private void Awake() { rbody = GetComponent<Rigidbody2D>(); }
+    private void Awake()
+    {
+        rbody = GetComponent<Rigidbody2D>();
+        ResetVelocity();
+    }
+
+    public void ResetVelocity() { rbody.velocity = Vector3.zero; }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
